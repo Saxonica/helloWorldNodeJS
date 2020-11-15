@@ -1,4 +1,4 @@
-# Hello World in Node.js
+# Hello World in Saxon JS 2 on Node.js
 
 This project contains (almost) the simplest possible “hello world”
 example using Saxon JS 2 in Node.js.
@@ -10,7 +10,7 @@ project up and running in Node.js. You have to install Node.js yourself.
 
 ## TL;DR
 
-Run `npm install` to download and install the Node packages.
+Run `npm install` to download and install the Node.js packages.
 
 Run `npm run start:dev` to start the web application. This will be on
 port 3002 by default. If you want to run it on a different port, edit `.env`.
@@ -37,6 +37,11 @@ have come from another web service or from some other part of your
 application. In this case, the stylesheet returns a page that shows
 the key/value pairs in the map.
 
+Unlike the [helloWorldJS](https://github.com/Saxonica/helloWorldJS)
+example, this version runs the XSLT processor in Node.js, on the
+server, not in your browser. Of course, there’s nothing to prevent you
+from processing the output of this process with another XSLT process in the browser!
+
 ## How does it work?
 
 There are a few moving pieces. They aren’t all strictly part of the
@@ -48,7 +53,7 @@ how the pieces might fit together in a more realistic application.
 * `index.js` is an Express web application that supports two endpoints, “/” and “/json”.
   Both run the XSLT stylesheet to return the results.
 * `main.sef.json` is the compiled stylesheet. The XSLT source is in `xslt/main.xsl`.
-* `.env`, `package.json`, and `package-lock.json` are just Node
+* `.env`, `package.json`, and `package-lock.json` are just Node.js
   furniture.
 
 ### The compiler
