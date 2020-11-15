@@ -1,4 +1,4 @@
-# Hello World in Node
+# Hello World in Node.js
 
 This project contains (almost) the simplest possible “hello world”
 example using Saxon JS 2 in Node.js.
@@ -31,7 +31,7 @@ behind the scenes.
 When you issue a GET for “/”, the main stylesheet is run and it
 returns an HTML page with some static text.
 
-When you issue a GET for “/”, the main stylesheet is passed a JSON
+When you issue a GET for “/json”, the main stylesheet is passed a JSON
 map. The map is hard coded into `index.js`, but in real life it might
 have come from another web service or from some other part of your
 application. In this case, the stylesheet returns a page that shows
